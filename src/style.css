@@ -1,0 +1,49 @@
+:root {
+  /* font size */
+  --font-size: calc(0.625rem + 0.5vw);
+  font-size: var(--font-size);
+}
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10vh 90vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: aqua;
+}
+
+.search-city {
+  margin-right: 5rem;
+  border-radius: 5px;
+}
+
+.search-city-input {
+  width: 15rem;
+  height: 1.75rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border: none;
+}
+
+.search-city-input:focus {
+  border: 1px solid green;
+  outline: none;
+}
+
+.main {
+  background-color: yellowgreen;
+}
