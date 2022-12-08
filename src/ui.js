@@ -39,7 +39,12 @@ function createWeatherCard() {
   return container;
 }
 
-async function setWeatherCardInfo(weatherObj) {
+function setWeatherCardInfo(weatherObj) {
+  // delete current card if it exists
+  if (document.querySelector('.today-weather').firstChild) {
+    deleteWeatherCard();
+  }
+
   // create card
   const container = createWeatherCard();
   // set weather object
@@ -56,6 +61,10 @@ async function setWeatherCardInfo(weatherObj) {
     obj.feelsLike
   )}°C`;
   container.childNodes[2].childNodes[2].innerHTML = `HUMIDITY: ${obj.humidity}%`;
+}
+
+function deleteWeatherCard() {
+  document.querySelector('.today-weather').firstChild.remove();
 }
 
 export { setWeatherCardInfo };
