@@ -44,6 +44,9 @@ function setWeatherCardInfo(weatherObj) {
     deleteWeatherCard();
   }
 
+  // clear input area
+  document.querySelector('#search-city').value = '';
+
   // create card
   const container = createWeatherCard();
   // set weather object

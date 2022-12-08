@@ -6,6 +6,8 @@
   /* color */
   --color: antiquewhite;
   color: var(--color);
+
+  font-family: 'Noto Sans', sans-serif;
 }
 
 *,
@@ -18,8 +20,8 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 10vh 90vh;
-
   height: 100%;
+
   /* free image link, thanks to jplenio
   https://pixabay.com/photos/thunderstorm-ocean-lightning-3440450/ */
   background-image: url('./images/background-image.jpg');
@@ -28,11 +30,7 @@ body {
   background-size: cover;
 }
 
-.header {
-}
-
 /* ----- form style ----- */
-
 form {
   position: absolute;
   right: 1.5rem;
@@ -86,20 +84,15 @@ input:focus:invalid {
   box-sizing: border-box;
 }
 
-.error.active {
-}
-
 /* ---- main style -----*/
-
 .main {
   display: flex;
   align-items: center;
 }
 
 /* weather card*/
-
 .weathercard {
-  width: 35rem;
+  width: 45rem;
   height: 20rem;
   margin-left: 5rem;
 
@@ -107,6 +100,7 @@ input:focus:invalid {
   flex-wrap: wrap;
 }
 
+/* weather card fadein animation */
 .card-fade-in {
   animation-duration: 1s;
   animation-timing-function: ease;
@@ -127,6 +121,7 @@ input:focus:invalid {
   }
 }
 
+/* weathercard children */
 .weathercard-header {
   font-size: 2.5rem;
   order: 1;
@@ -184,7 +179,4 @@ input:focus:invalid {
   margin-left: 3rem;
   width: 100%;
   height: 100%;
-}
-
-.subdetail {
 }
