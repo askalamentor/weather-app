@@ -13,14 +13,19 @@ html {
 body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 10vh 90vh;
+  grid-template-rows: 15vh 85vh;
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
   background-color: aqua;
+}
+
+/* ----- form style ----- */
+
+form {
+  position: absolute;
+  right: 1.5rem;
+  top: 2rem;
 }
 
 .search-city {
@@ -43,6 +48,37 @@ body {
   border: 1px solid green;
   outline: none;
 }
+
+input:invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+/* error message style*/
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding: 0;
+  margin-top: -0.2rem;
+
+  font-size: 90%;
+  color: #900;
+  border-radius: 5px;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+}
+
+/* ---- main style -----*/
 
 .main {
   background-color: yellowgreen;

@@ -8,13 +8,18 @@
   </head>
   <body>
     <header class="header">
-      <form class="search-city">
+      <form class="search-city" novalidate>
         <input
           type="text"
+          name="city"
           class="search-city-input"
+          id="search-city"
           placeholder="Search City"
           autocomplete="off"
+          required
         />
+        <br />
+        <span class="error" id="search-error" aria-live="polite"></span>
       </form>
     </header>
     <main class="main">
