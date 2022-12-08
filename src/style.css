@@ -2,6 +2,10 @@
   /* font size */
   --font-size: calc(0.625rem + 0.5vw);
   font-size: var(--font-size);
+
+  /* color */
+  --color: antiquewhite;
+  color: var(--color);
 }
 
 *,
@@ -17,7 +21,6 @@ body {
 }
 
 .header {
-  background-color: aqua;
 }
 
 /* ----- form style ----- */
@@ -45,7 +48,7 @@ form {
 }
 
 .search-city-input:focus {
-  border: 1px solid green;
+  border: 1px solid var();
   outline: none;
 }
 
@@ -81,23 +84,76 @@ input:focus:invalid {
 /* ---- main style -----*/
 
 .main {
-  background-color: yellowgreen;
+  display: flex;
+  align-items: center;
 }
 
 /* weather card*/
+
 .weathercard {
-  width: 10rem;
-  height: 10rem;
-  background-color: red;
+  width: 35rem;
+  height: 20rem;
+  margin-left: 5rem;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .weathercard-header {
+  font-size: 2.5rem;
+  order: 1;
+  flex: 0 0 100%;
+  height: 30%;
+
+  display: flex;
+  align-items: center;
+  left: 1rem;
 }
 
 .weathercard-temp {
+  order: 2;
+  flex: 0 0 49%;
+  height: 70%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-right: 1px solid var(--color);
+}
+
+.weathercard-temp > * {
+  height: 100%;
+}
+
+.weathercard-temp > :first-child {
+  font-size: 14rem;
+  display: flex;
+  align-items: center;
+}
+
+.weathercard-temp > :first-child + p {
+  font-size: 2rem;
+  margin-top: 2rem;
 }
 
 .weathercard-detail {
+  order: 3;
+  flex: 0 0 49%;
+  height: 70%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  border-left: 1px solid var(--color);
+}
+
+.weathercard-detail > * {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
 }
 
 .subdetail {
