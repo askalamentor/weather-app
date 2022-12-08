@@ -83,3 +83,22 @@ input:focus:invalid {
 .main {
   background-color: yellowgreen;
 }
+
+/* weather card*/
+.weathercard {
+  width: 10rem;
+  height: 10rem;
+  background-color: red;
+}
+
+.weathercard-header {
+}
+
+.weathercard-temp {
+}
+
+.weathercard-detail {
+}
+
+.subdetail {
+}

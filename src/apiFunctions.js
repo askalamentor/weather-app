@@ -1,3 +1,5 @@
+import { setWeatherCardInfo } from './ui';
+
 const apiKey = '892096b32bf13367e8bb4d2a5b16b4b4';
 
 async function getWeatherData(city) {
@@ -17,7 +19,6 @@ async function getWeatherData(city) {
       `https://api.openweathermap.org/data/2.5/weather?lat=${cityLat}&lon=${cityLon}&units=metric&appid=${apiKey}`
     );
     const weatherData = await weatherResponse.json();
-
     // outputs
     const weatherObject = {
       // city name and country
@@ -29,11 +30,7 @@ async function getWeatherData(city) {
       feelsLike: weatherData.main.feels_like,
       description: weatherData.weather[0].description,
     };
-
-    console.log(weatherObject);
-    console.log(weatherData);
-
-    return weatherObject;
+    setWeatherCardInfo(weatherObject);
   } catch (error) {
     console.log('');
   }

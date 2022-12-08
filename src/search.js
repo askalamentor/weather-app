@@ -12,9 +12,10 @@ function searchCity() {
       event.preventDefault();
     } else {
       city = document.querySelector('#search-city').value;
+      getWeatherData(city);
+      event.preventDefault();
     }
   });
-  getWeatherData(city);
 }
 
 function showError() {
