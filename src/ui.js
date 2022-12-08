@@ -56,11 +56,13 @@ function setWeatherCardInfo(weatherObj) {
   container.childNodes[1].childNodes[0].innerHTML = `${Math.round(obj.temp)}`;
   container.childNodes[1].childNodes[1].innerHTML = '°C';
   // detail info
-  container.childNodes[2].childNodes[0].innerHTML = `${obj.description}`;
+  container.childNodes[2].childNodes[0].innerHTML = `${obj.description.toUpperCase()}`;
   container.childNodes[2].childNodes[1].innerHTML = `FEELS LIKE: ${Math.round(
     obj.feelsLike
   )}°C`;
   container.childNodes[2].childNodes[2].innerHTML = `HUMIDITY: ${obj.humidity}%`;
+
+  changeBackgroundImage(obj.description);
 }
 
 function deleteWeatherCard() {
