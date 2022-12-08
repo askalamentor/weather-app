@@ -14,21 +14,26 @@ function searchCity() {
     if (!search.validity.valid) {
       showError();
       event.preventDefault();
+
       // valid user input
     } else {
+      // get user input
       city = document.querySelector('#search-city').value;
       getWeatherData(city);
+
+      // clear if city found
+      searchError.textContent = '';
       event.preventDefault();
     }
   });
 }
 
-function showError() {
+function showError(error) {
   // if user enters invalid input
-  if (search.validity.valueMissing) {
+  if (search.validity.valueMissing || error) {
     searchError.textContent = 'No matching location found!';
   }
   searchError.className = 'error active';
 }
 
-export { searchCity };
+export { searchCity, showError };

@@ -1,4 +1,5 @@
 import { setWeatherCardInfo } from './ui';
+import { showError } from './search';
 
 const apiKey = '892096b32bf13367e8bb4d2a5b16b4b4';
 
@@ -31,7 +32,9 @@ async function getWeatherData(city) {
       description: weatherData.weather[0].description,
     };
     setWeatherCardInfo(weatherObject);
-  } catch (error) {}
+  } catch (error) {
+    showError(error);
+  }
 }
 
 export { getWeatherData };
