@@ -1,7 +1,6 @@
 const apiKey = '892096b32bf13367e8bb4d2a5b16b4b4';
-let city = 'London';
 
-async function getWeatherData() {
+async function getWeatherData(city) {
   try {
     // get city coordinates
     const cityCoordinateResponse = await fetch(

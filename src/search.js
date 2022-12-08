@@ -1,3 +1,5 @@
+import { getWeatherData } from './apiFunctions';
+
 const form = document.querySelector('form');
 const search = document.querySelector('#search-city');
 const searchError = document.querySelector('#search-error');
@@ -12,7 +14,7 @@ function searchCity() {
       city = document.querySelector('#search-city').value;
     }
   });
-  return city;
+  getWeatherData(city);
 }
 
 function showError() {
