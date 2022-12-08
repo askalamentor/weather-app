@@ -31,9 +31,7 @@ async function getWeatherData(city) {
       description: weatherData.weather[0].description,
     };
     setWeatherCardInfo(weatherObject);
-  } catch (error) {
-    console.log('');
-  }
+  } catch (error) {}
 }
 
 export { getWeatherData };

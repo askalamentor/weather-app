@@ -1,7 +1,6 @@
-const todayWeather = document.querySelector('.today-weather');
-
 function createWeatherCard() {
   // main elements
+  const todayWeather = document.querySelector('.today-weather');
   const container = document.createElement('div');
   const header = document.createElement('div');
   const tempArea = document.createElement('div');
@@ -61,8 +60,6 @@ function setWeatherCardInfo(weatherObj) {
     obj.feelsLike
   )}°C`;
   container.childNodes[2].childNodes[2].innerHTML = `HUMIDITY: ${obj.humidity}%`;
-
-  changeBackgroundImage(obj.description);
 }
 
 function deleteWeatherCard() {
