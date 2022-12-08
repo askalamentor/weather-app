@@ -3,12 +3,16 @@ const search = document.querySelector('#search-city');
 const searchError = document.querySelector('#search-error');
 
 function searchCity() {
+  let city = '';
   form.addEventListener('submit', (event) => {
     if (!search.validity.valid) {
       showError();
       event.preventDefault();
+    } else {
+      city = document.querySelector('#search-city').value;
     }
   });
+  return city;
 }
 
 function showError() {

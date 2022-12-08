@@ -36,7 +36,7 @@ async function getWeatherData() {
 
     return weatherObject;
   } catch (error) {
-    console.log('Weather data unavailable');
+    console.log('');
   }
 }
 
