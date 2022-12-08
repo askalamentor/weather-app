@@ -11,7 +11,7 @@ function createWeatherCard() {
   container.appendChild(tempArea);
   container.appendChild(detailArea);
   // class
-  container.classList.add('weathercard');
+  container.classList.add('weathercard', 'card-fade-in');
   header.classList.add('weathercard-header');
   tempArea.classList.add('weathercard-temp');
   detailArea.classList.add('weathercard-detail');

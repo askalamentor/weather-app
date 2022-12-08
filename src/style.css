@@ -107,6 +107,26 @@ input:focus:invalid {
   flex-wrap: wrap;
 }
 
+.card-fade-in {
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.9, 0.9);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .weathercard-header {
   font-size: 2.5rem;
   order: 1;
